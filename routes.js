@@ -3,11 +3,6 @@ const fs = require("fs");
 
 const routesHandler = (req, res) => {
  if (req.url === "/") {
-  //   res.write("<html>");
-  //   res.write(
-  //    "<body><form method='POST' action='/message'><input type='text' name='message'><button type='submit'>Submit</button></form></body>"
-  //   );
-  //   res.write("<html>");
   res.write("<html>");
   res.write("<body>Hello from the assignment!</body>");
   res.write(
@@ -26,21 +21,6 @@ const routesHandler = (req, res) => {
  }
 
  if (req.url === "/create-user" && req.method === "POST") {
-  //   const body = [];
-  //   req.on("data", (chunk) => {
-  //    body.push(chunk);
-  //    console.log(chunk);
-  //   });
-  //   return req.on("end", () => {
-  //    const bodyString = Buffer.concat(body).toString();
-  //    const message = bodyString.split("=")[1];
-  //    console.log(message);
-  //    console.log(bodyString);
-  //    fs.writeFileSync("req.txt", message);
-  //    res.statusCode = 302;
-  //    //    res.setHeader("Location", "/");
-  //    return res.end();
-  //   });
   const body = [];
   req.on("data", (chunk) => {
    body.push(chunk);
