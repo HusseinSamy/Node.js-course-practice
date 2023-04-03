@@ -52,6 +52,8 @@ const routesHandler = (req, res) => {
    const message = bodyString.split("=")[1];
    console.log(message);
    fs.writeFileSync("req.txt", message);
+   res.statusCode = 302;
+   res.setHeader("Location", "/users");
    return res.end();
   });
  }
